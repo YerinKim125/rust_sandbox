@@ -14,7 +14,7 @@ mod pointer_ref;
 mod structs;
 mod enums;
 //mod cli;
-// mod nQueen;
+mod nQueen;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -47,8 +47,8 @@ fn main() {
     } else if command == "enums" {
         enums::run();
     } 
-    // else if command == "nQueen" {
-    //     nQueen::run();
-    // }
+    else if command == "nQueen" {
+        nQueen::run();
+    }
     //cli::run();
 }
