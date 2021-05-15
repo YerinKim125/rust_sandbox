@@ -1,3 +1,4 @@
+use std::env;
 use std::usize;
 
 fn nqueen(mut nq: i8, coor: &mut [i8], n: i8) {
@@ -53,8 +54,11 @@ fn nqueen(mut nq: i8, coor: &mut [i8], n: i8) {
 }
 
 pub fn run() {
+    let args: Vec<String> = env::args().collect();
+    let command = args[1].clone();
+    let n: i8 = command.parse::<i8>().unwrap();
     let mut f_coor:[i8; 15] = [-1; 15];
     let mut ans:[i8; 15] = [0; 15];
     // ans = nqueen(0, &mut f_coor, 5);
-    nqueen(0, &mut f_coor, 5);
+    nqueen(0, &mut f_coor, n);
 }
