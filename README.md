@@ -1,3 +1,3 @@
 # rust_sandbox
 
-cargo run (number <= 15)
+cargo run nQueen (number <= 15)

@@ -36,29 +36,20 @@ fn nqueen(mut nq: i8, coor: &mut [i8], n: i8) {
         }
 
         flag = true;
-
-        // coor[(nq+n) as usize] = y;
-        // nq += 1;
-
-        // for i in 0..nq {
-        //     if coor[(i+n) as usize] == y || (nq-coor[i as usize])==(y-coor[(i+n) as usize]) || (nq-coor[i as usize])==-(y-coor[(i+n) as usize]) {
-        //         flag = false;
-        //     }
-        // }
-
-        // nqueen(nq, coor, n);
-        
-        // flag = true;
-        // coor[(nq+n) as usize] = 0;
     }
 }
 
 pub fn run() {
     let args: Vec<String> = env::args().collect();
-    let command = args[1].clone();
+    let command = args[2].clone();
     let n: i8 = command.parse::<i8>().unwrap();
     let mut f_coor:[i8; 15] = [-1; 15];
     let mut ans:[i8; 15] = [0; 15];
     // ans = nqueen(0, &mut f_coor, 5);
+
     nqueen(0, &mut f_coor, n);
+
+    if n <= 3 {
+        println!("\n\n\n============================= NONE =============================\n\n\n");
+    }
 }
