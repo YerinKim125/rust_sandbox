@@ -1,7 +1,7 @@
 use std::env;
 use std::usize;
 
-fn nqueen(mut nq: i8, coor: &mut [i8], n: i8) {
+fn nqueen(nq: i8, coor: &mut [i8], n: i8) {
     if nq == n {
         // println!("{:?}", coor);
 
